@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -50,7 +49,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       description: 'Three varieties of artisanal bruschetta',
       price: 12,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1572441713132-51c75654db73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
@@ -77,7 +76,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       description: 'Creamy lobster risotto with fresh herbs',
       price: 42,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1611599539952-13f5aa2137c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '8',
@@ -224,7 +223,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       description: 'Freshly squeezed seasonal fruit juices',
       price: 6,
       category: 'beverages',
-      image: 'https://images.unsplash.com/photo-1622597998012-05eb4c1e9e1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     }
   ];
 
