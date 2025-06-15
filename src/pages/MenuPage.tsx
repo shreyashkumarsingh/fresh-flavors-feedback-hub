@@ -50,7 +50,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       description: 'Crispy potato patties with yogurt and tamarind chutney',
       price: 10,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1626132647523-66f0bf380027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1606471842876-e0d8fb6f7b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
@@ -257,7 +257,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
                 <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">S</span>
                 </div>
-                <span className="text-2xl font-bold text-gray-800">Savoria Menu</span>
+                <span className="text-2xl font-bold text-gray-800">Spice Palace Menu</span>
               </div>
             </div>
             <Button

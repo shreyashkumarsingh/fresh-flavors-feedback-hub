@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@savoria.com", "reservations@savoria.com", "events@savoria.com"]
+      details: ["info@spicepalace.com", "reservations@spicepalace.com", "events@spicepalace.com"]
     },
     {
       icon: Clock,
@@ -33,8 +33,12 @@ const Contact = () => {
     { icon: Twitter, href: "#", color: "hover:text-blue-400" }
   ];
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:info@spicepalace.com';
+  };
+
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -83,7 +87,11 @@ const Contact = () => {
                 <Phone className="h-5 w-5 mr-2" />
                 Call (555) 123-4567
               </Button>
-              <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/20 py-3 text-lg font-semibold">
+              <Button 
+                onClick={handleEmailClick}
+                variant="outline" 
+                className="w-full border-white/30 text-white hover:bg-white/20 py-3 text-lg font-semibold"
+              >
                 <Mail className="h-5 w-5 mr-2" />
                 Email Us
               </Button>
@@ -109,8 +117,8 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-white/20 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-2xl font-bold">Savoria</div>
-            <p className="text-gray-400">© 2024 Savoria Restaurant. All rights reserved.</p>
+            <div className="text-2xl font-bold">Spice Palace</div>
+            <p className="text-gray-400">© 2024 Spice Palace Restaurant. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

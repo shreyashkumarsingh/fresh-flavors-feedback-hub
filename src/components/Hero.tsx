@@ -39,7 +39,7 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
             <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
-            <div className="text-2xl font-bold text-white">Savoria</div>
+            <div className="text-2xl font-bold text-white">Spice Palace</div>
           </div>
           <div className="flex items-center space-x-6">
             <nav className="hidden md:flex space-x-6">
@@ -92,13 +92,13 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
             <span className="block animate-fade-in">Welcome to</span>
             <span className="block bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent animate-fade-in delay-300">
-              Savoria
+              Spice Palace
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
-            Where culinary artistry meets exceptional dining. Experience flavors that tell stories, 
-            crafted with passion and served with elegance.
+            Where authentic Indian flavors meet modern culinary artistry. Experience the rich heritage of Indian cuisine, 
+            crafted with traditional spices and served with royal elegance.
           </p>
         </div>
 
