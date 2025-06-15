@@ -1,5 +1,5 @@
 
-import { ShoppingCart, Star, Clock, MapPin } from 'lucide-react';
+import { ShoppingCart, Star, Clock, MapPin, Play, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeroProps {
@@ -13,85 +13,142 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 animate-pulse"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23f97316'/%3E%3Ctext x='960' y='540' font-family='Arial' font-size='60' fill='white' text-anchor='middle' dominant-baseline='middle'%3ERestaurant Hero Image%3C/text%3E%3C/svg%3E")`
-        }}
-      ></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-red-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+      </div>
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
 
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-20 p-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-white">Savoria</div>
-          <Button
-            onClick={onCartClick}
-            variant="outline"
-            size="sm"
-            className="bg-white/10 border-white/20 text-white hover:bg-white/20 relative"
-          >
-            <ShoppingCart className="h-5 w-5 mr-2" />
-            Cart
-            {cartItemsCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
-                {cartItemsCount}
-              </span>
-            )}
-          </Button>
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">S</span>
+            </div>
+            <div className="text-2xl font-bold text-white">Savoria</div>
+          </div>
+          <div className="flex items-center space-x-6">
+            <nav className="hidden md:flex space-x-6">
+              <a href="#menu" className="text-white/80 hover:text-white transition-colors">Menu</a>
+              <a href="#about" className="text-white/80 hover:text-white transition-colors">About</a>
+              <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+            </nav>
+            <Button
+              onClick={onCartClick}
+              variant="outline"
+              size="sm"
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 relative transition-all duration-300"
+            >
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              Cart
+              {cartItemsCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                  {cartItemsCount}
+                </span>
+              )}
+            </Button>
+          </div>
         </div>
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Welcome to
-          <span className="block text-orange-400">Savoria</span>
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in delay-200">
-          Experience culinary excellence with our chef-crafted dishes made from the finest ingredients
-        </p>
-        
-        {/* Features */}
-        <div className="flex flex-wrap justify-center gap-8 mb-10 animate-fade-in delay-300">
-          <div className="flex items-center gap-2">
-            <Star className="h-5 w-5 text-yellow-400" />
-            <span>5-Star Rated</span>
+      <div className="relative z-20 text-center text-white px-6 max-w-6xl mx-auto">
+        {/* Main Heading */}
+        <div className="mb-8">
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 animate-fade-in">
+            <Star className="h-4 w-4 text-yellow-400 mr-2" />
+            <span className="text-sm font-medium">Award-Winning Restaurant</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Clock className="h-5 w-5 text-orange-400" />
-            <span>30min Delivery</span>
+          
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            <span className="block animate-fade-in">Welcome to</span>
+            <span className="block bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent animate-fade-in delay-300">
+              Savoria
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
+            Where culinary artistry meets exceptional dining. Experience flavors that tell stories, 
+            crafted with passion and served with elegance.
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fade-in delay-700">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+            <div className="flex items-center justify-center mb-3">
+              <Star className="h-8 w-8 text-yellow-400" />
+            </div>
+            <div className="text-3xl font-bold mb-1">4.9</div>
+            <div className="text-sm text-gray-300">5-Star Rating</div>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="h-5 w-5 text-red-400" />
-            <span>Downtown Location</span>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+            <div className="flex items-center justify-center mb-3">
+              <Clock className="h-8 w-8 text-orange-400" />
+            </div>
+            <div className="text-3xl font-bold mb-1">30</div>
+            <div className="text-sm text-gray-300">Min Delivery</div>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+            <div className="flex items-center justify-center mb-3">
+              <MapPin className="h-8 w-8 text-red-400" />
+            </div>
+            <div className="text-3xl font-bold mb-1">50K+</div>
+            <div className="text-sm text-gray-300">Happy Customers</div>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-500">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in delay-1000">
           <Button
             onClick={scrollToMenu}
             size="lg"
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
+            className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl"
           >
-            View Menu
+            Explore Menu
+            <ChevronDown className="ml-2 h-5 w-5" />
           </Button>
+          
           <Button
             variant="outline"
             size="lg"
-            className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-200"
+            className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
           >
-            Reserve Table
+            <Play className="mr-2 h-5 w-5" />
+            Watch Story
           </Button>
+        </div>
+
+        {/* Featured Image Placeholder */}
+        <div className="relative max-w-4xl mx-auto animate-fade-in delay-1200">
+          <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center text-2xl font-semibold shadow-2xl">
+            Featured Restaurant Ambiance
+          </div>
+          <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
+            Live Kitchen
+          </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+          </div>
+          <span className="text-white/70 text-xs font-medium">Scroll to explore</span>
         </div>
       </div>
     </section>
