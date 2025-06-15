@@ -76,7 +76,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       description: 'Creamy lobster risotto with fresh herbs',
       price: 42,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1611599539952-13f5aa2137c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '8',
