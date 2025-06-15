@@ -1,4 +1,3 @@
-
 import { ShoppingCart, Star, Clock, MapPin, Play, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -131,10 +130,14 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
           </Button>
         </div>
 
-        {/* Featured Image Placeholder */}
+        {/* Featured Image */}
         <div className="relative max-w-4xl mx-auto animate-fade-in delay-1200">
-          <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center text-2xl font-semibold shadow-2xl">
-            Featured Restaurant Ambiance
+          <div className="aspect-video rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Elegant restaurant interior with warm lighting and modern decor"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
             Live Kitchen
