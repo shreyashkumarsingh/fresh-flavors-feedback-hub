@@ -1,11 +1,10 @@
-
 import { Card, CardContent } from '@/components/ui/card';
-import { Chef, Award, Heart, Clock } from 'lucide-react';
+import { ChefHat, Award, Heart, Clock } from 'lucide-react';
 
 const About = () => {
   const features = [
     {
-      icon: Chef,
+      icon: ChefHat,
       title: "Expert Chefs",
       description: "Our experienced chefs bring years of culinary expertise to every dish"
     },
