@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Leaf, WheatOff, Plus } from 'lucide-react';
 import { MenuItem } from '../types/restaurant';
+import { Link } from 'react-router-dom';
 
 interface MenuProps {
   onAddToCart: (item: MenuItem, quantity: number) => void;
@@ -21,7 +22,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Crispy risotto balls with truffle oil and parmesan',
       price: 14,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80',
+      image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
@@ -30,7 +31,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Pan-seared scallops with cauliflower purée',
       price: 18,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80'
+      image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '3',
@@ -38,7 +39,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Fresh burrata with heirloom tomatoes and basil',
       price: 16,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80',
+      image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     // Mains
@@ -48,7 +49,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: '12oz wagyu ribeye with roasted vegetables',
       price: 65,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '5',
@@ -56,7 +57,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Creamy lobster risotto with fresh herbs',
       price: 42,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '6',
@@ -64,7 +65,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Slow-cooked duck leg with cherry sauce',
       price: 38,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80'
+      image: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     // Desserts
     {
@@ -73,7 +74,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Warm chocolate soufflé with vanilla ice cream',
       price: 12,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80',
+      image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
@@ -82,7 +83,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       description: 'Classic vanilla crème brûlée with caramelized sugar',
       price: 10,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+      image: 'https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     }
   ];
@@ -100,11 +101,16 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Our Menu
+            Our Menu Highlights
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our carefully curated selection of dishes, crafted with passion and the finest ingredients
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            Discover our carefully curated selection of signature dishes, crafted with passion and the finest ingredients
           </p>
+          <Link to="/menu">
+            <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-full">
+              View Full Menu
+            </Button>
+          </Link>
         </div>
 
         {/* Category Tabs */}
