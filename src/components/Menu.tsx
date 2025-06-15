@@ -18,72 +18,73 @@ const Menu = ({ onAddToCart }: MenuProps) => {
     // Appetizers
     {
       id: '1',
-      name: 'Truffle Arancini',
-      description: 'Crispy risotto balls with truffle oil and parmesan',
-      price: 14,
+      name: 'Samosa Chaat',
+      description: 'Crispy samosas topped with spiced chickpeas and chutneys',
+      price: 12,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '2',
-      name: 'Seared Scallops',
-      description: 'Pan-seared scallops with cauliflower purée',
-      price: 18,
+      name: 'Tandoori Chicken Wings',
+      description: 'Marinated chicken wings grilled in tandoor oven',
+      price: 16,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '3',
-      name: 'Burrata Caprese',
-      description: 'Fresh burrata with heirloom tomatoes and basil',
-      price: 16,
+      name: 'Paneer Tikka',
+      description: 'Grilled cottage cheese cubes with bell peppers and onions',
+      price: 14,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     // Mains
     {
       id: '4',
-      name: 'Wagyu Ribeye',
-      description: '12oz wagyu ribeye with roasted vegetables',
-      price: 65,
+      name: 'Butter Chicken',
+      description: 'Tender chicken in rich tomato and cream curry',
+      price: 22,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '5',
-      name: 'Lobster Risotto',
-      description: 'Creamy lobster risotto with fresh herbs',
-      price: 42,
+      name: 'Dal Makhani',
+      description: 'Creamy black lentils slow-cooked with butter and spices',
+      price: 18,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
     },
     {
       id: '6',
-      name: 'Duck Confit',
-      description: 'Slow-cooked duck leg with cherry sauce',
-      price: 38,
+      name: 'Biryani Hyderabadi',
+      description: 'Aromatic basmati rice with tender mutton and spices',
+      price: 28,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     // Desserts
     {
       id: '7',
-      name: 'Chocolate Soufflé',
-      description: 'Warm chocolate soufflé with vanilla ice cream',
-      price: 12,
+      name: 'Gulab Jamun',
+      description: 'Soft milk dumplings in cardamom-rose syrup',
+      price: 8,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1571167913668-572de1ba5c24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '8',
-      name: 'Crème Brûlée',
-      description: 'Classic vanilla crème brûlée with caramelized sugar',
+      name: 'Kulfi Faluda',
+      description: 'Traditional Indian ice cream with vermicelli and nuts',
       price: 10,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     }
   ];
@@ -104,7 +105,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
             Our Menu Highlights
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            Discover our carefully curated selection of signature dishes, crafted with passion and the finest ingredients
+            Discover our carefully curated selection of authentic Indian dishes, crafted with traditional spices and the finest ingredients
           </p>
           <Link to="/menu">
             <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-full">

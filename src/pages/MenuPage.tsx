@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -19,211 +20,216 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
     // Appetizers
     {
       id: '1',
-      name: 'Truffle Arancini',
-      description: 'Crispy risotto balls with truffle oil and parmesan',
-      price: 14,
+      name: 'Samosa Chaat',
+      description: 'Crispy samosas topped with spiced chickpeas and chutneys',
+      price: 12,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '2',
-      name: 'Seared Scallops',
-      description: 'Pan-seared scallops with cauliflower purée',
-      price: 18,
+      name: 'Tandoori Chicken Wings',
+      description: 'Marinated chicken wings grilled in tandoor oven',
+      price: 16,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '3',
-      name: 'Burrata Caprese',
-      description: 'Fresh burrata with heirloom tomatoes and basil',
-      price: 16,
+      name: 'Paneer Tikka',
+      description: 'Grilled cottage cheese cubes with bell peppers and onions',
+      price: 14,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '4',
-      name: 'Bruschetta Trio',
-      description: 'Three varieties of artisanal bruschetta',
-      price: 12,
+      name: 'Aloo Tikki Chaat',
+      description: 'Crispy potato patties with yogurt and tamarind chutney',
+      price: 10,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1626132647523-66f0bf380027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '5',
-      name: 'Tuna Tartare',
-      description: 'Fresh yellowfin tuna with avocado and citrus',
-      price: 20,
+      name: 'Seekh Kebab',
+      description: 'Spiced minced lamb grilled on skewers',
+      price: 18,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
 
     // Mains
     {
       id: '6',
-      name: 'Wagyu Ribeye',
-      description: '12oz wagyu ribeye with roasted vegetables',
-      price: 65,
+      name: 'Butter Chicken',
+      description: 'Tender chicken in rich tomato and cream curry',
+      price: 22,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '7',
-      name: 'Lobster Risotto',
-      description: 'Creamy lobster risotto with fresh herbs',
-      price: 42,
+      name: 'Dal Makhani',
+      description: 'Creamy black lentils slow-cooked with butter and spices',
+      price: 18,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
     },
     {
       id: '8',
-      name: 'Duck Confit',
-      description: 'Slow-cooked duck leg with cherry sauce',
-      price: 38,
+      name: 'Biryani Hyderabadi',
+      description: 'Aromatic basmati rice with tender mutton and spices',
+      price: 28,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '9',
-      name: 'Chilean Sea Bass',
-      description: 'Pan-seared sea bass with miso glaze',
-      price: 36,
+      name: 'Palak Paneer',
+      description: 'Cottage cheese cubes in creamy spinach curry',
+      price: 20,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
     },
     {
       id: '10',
-      name: 'Lamb Rack',
-      description: 'Herb-crusted rack of lamb with red wine jus',
-      price: 48,
+      name: 'Rogan Josh',
+      description: 'Aromatic lamb curry with traditional Kashmiri spices',
+      price: 26,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '11',
-      name: 'Osso Buco',
-      description: 'Braised veal shank with saffron risotto',
-      price: 44,
+      name: 'Chicken Tikka Masala',
+      description: 'Grilled chicken in spiced tomato-cream sauce',
+      price: 24,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '12',
-      name: 'Stuffed Portobello',
-      description: 'Quinoa and vegetable stuffed mushroom',
-      price: 28,
+      name: 'Chole Bhature',
+      description: 'Spiced chickpeas with fluffy fried bread',
+      price: 16,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '13',
-      name: 'Pan-Seared Salmon',
-      description: 'Atlantic salmon with lemon butter sauce',
-      price: 32,
+      name: 'Fish Curry Kerala',
+      description: 'Fresh fish in coconut and curry leaf gravy',
+      price: 25,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1627662168223-7df99068099a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '14',
-      name: 'Beef Tenderloin',
-      description: 'Grilled tenderloin with roasted garlic',
-      price: 52,
+      name: 'Tandoori Mixed Grill',
+      description: 'Assorted tandoori meats and vegetables',
+      price: 32,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
 
     // Desserts
     {
       id: '15',
-      name: 'Chocolate Soufflé',
-      description: 'Warm chocolate soufflé with vanilla ice cream',
-      price: 12,
+      name: 'Gulab Jamun',
+      description: 'Soft milk dumplings in cardamom-rose syrup',
+      price: 8,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1571167913668-572de1ba5c24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '16',
-      name: 'Crème Brûlée',
-      description: 'Classic vanilla crème brûlée with caramelized sugar',
+      name: 'Kulfi Faluda',
+      description: 'Traditional Indian ice cream with vermicelli and nuts',
       price: 10,
-      category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '17',
-      name: 'Tiramisu',
-      description: 'Traditional Italian tiramisu with espresso',
-      price: 11,
-      category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '18',
-      name: 'Lemon Tart',
-      description: 'Tangy lemon curd with buttery pastry crust',
-      price: 9,
-      category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '19',
-      name: 'Panna Cotta',
-      description: 'Vanilla panna cotta with berry compote',
-      price: 8,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
-      id: '20',
-      name: 'Chocolate Lava Cake',
-      description: 'Molten chocolate cake with ice cream',
-      price: 13,
+      id: '17',
+      name: 'Ras Malai',
+      description: 'Soft cottage cheese dumplings in cardamom milk',
+      price: 9,
+      category: 'desserts',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
+    },
+    {
+      id: '18',
+      name: 'Kheer Badam',
+      description: 'Rice pudding with almonds and cardamom',
+      price: 7,
+      category: 'desserts',
+      image: 'https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
+    },
+    {
+      id: '19',
+      name: 'Jalebi',
+      description: 'Crispy spiral sweets soaked in sugar syrup',
+      price: 6,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
+    },
+    {
+      id: '20',
+      name: 'Gajar Halwa',
+      description: 'Carrot pudding with nuts and cardamom',
+      price: 8,
+      category: 'desserts',
+      image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
 
     // Beverages
     {
       id: '21',
-      name: 'House Wine Selection',
-      description: 'Curated selection of red and white wines',
-      price: 8,
-      category: 'beverages',
-      image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      id: '22',
-      name: 'Craft Cocktails',
-      description: 'Signature cocktails made with premium spirits',
-      price: 12,
-      category: 'beverages',
-      image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      id: '23',
-      name: 'Artisan Coffee',
-      description: 'Single-origin coffee beans, expertly roasted',
+      name: 'Masala Chai',
+      description: 'Traditional spiced tea with milk and aromatic spices',
       price: 4,
       category: 'beverages',
       image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      id: '24',
-      name: 'Fresh Juices',
-      description: 'Freshly squeezed seasonal fruit juices',
+      id: '22',
+      name: 'Mango Lassi',
+      description: 'Creamy yogurt drink with fresh mango pulp',
       price: 6,
       category: 'beverages',
-      image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
+    },
+    {
+      id: '23',
+      name: 'Nimbu Pani',
+      description: 'Fresh lime water with mint and black salt',
+      price: 5,
+      category: 'beverages',
+      image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
+    },
+    {
+      id: '24',
+      name: 'Thandai',
+      description: 'Traditional spiced milk drink with nuts and rose',
+      price: 7,
+      category: 'beverages',
+      image: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      isVegetarian: true
     }
   ];
 
@@ -274,10 +280,10 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            Complete Menu
+            Complete Indian Menu
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our full selection of carefully crafted dishes, each prepared with the finest ingredients and utmost attention to detail
+            Explore our authentic Indian cuisine featuring traditional recipes passed down through generations, prepared with the finest spices and ingredients
           </p>
         </div>
 

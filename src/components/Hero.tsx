@@ -1,3 +1,4 @@
+
 import { ShoppingCart, Star, Clock, MapPin, Play, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -9,6 +10,10 @@ interface HeroProps {
 const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
   const scrollToMenu = () => {
     document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -38,9 +43,24 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
           </div>
           <div className="flex items-center space-x-6">
             <nav className="hidden md:flex space-x-6">
-              <a href="#menu" className="text-white/80 hover:text-white transition-colors">Menu</a>
-              <a href="#about" className="text-white/80 hover:text-white transition-colors">About</a>
-              <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+              <button 
+                onClick={scrollToMenu}
+                className="text-white/80 hover:text-white transition-colors cursor-pointer"
+              >
+                Menu
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-white/80 hover:text-white transition-colors cursor-pointer"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="text-white/80 hover:text-white transition-colors cursor-pointer"
+              >
+                Contact
+              </button>
             </nav>
             <Button
               onClick={onCartClick}
