@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
@@ -90,7 +89,7 @@ const Contact = () => {
               <Button 
                 onClick={handleEmailClick}
                 variant="outline" 
-                className="w-full border-white/30 text-white hover:bg-white/20 py-3 text-lg font-semibold"
+                className="w-full border-orange-400 text-white bg-orange-600/80 hover:bg-orange-700 border-2 py-3 text-lg font-semibold shadow-lg transition-all duration-200"
               >
                 <Mail className="h-5 w-5 mr-2" />
                 Email Us

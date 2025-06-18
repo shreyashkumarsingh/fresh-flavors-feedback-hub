@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -17,7 +16,14 @@ const FeedbackForm = () => {
   });
   const [hoveredRating, setHoveredRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedbackList, setFeedbackList] = useState([]);
   const { toast } = useToast();
+
+  useEffect(() => {
+    fetch('http://localhost:4000/api/feedback')
+      .then(res => res.json())
+      .then(data => setFeedbackList(data));
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,15 +39,28 @@ const FeedbackForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch('http://localhost:4000/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(feedback)
+      });
+      if (!res.ok) throw new Error('Failed to submit');
+      const saved = await res.json();
+      setFeedbackList(prev => [saved, ...prev]);
+      toast({
+        title: "Thank you for your feedback!",
+        description: "Your review has been submitted successfully.",
+      });
+      setFeedback({ name: '', email: '', rating: 0, comment: '' });
+    } catch {
+      toast({
+        title: "Submission failed",
+        description: "Could not submit feedback. Please try again later.",
+        variant: "destructive"
+      });
+    }
     
-    toast({
-      title: "Thank you for your feedback!",
-      description: "Your review has been submitted successfully.",
-    });
-
-    setFeedback({ name: '', email: '', rating: 0, comment: '' });
     setIsSubmitting(false);
   };
 
@@ -157,25 +176,22 @@ const FeedbackForm = () => {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">What Our Customers Say</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: "Sarah Johnson", rating: 5, comment: "Absolutely incredible food! The truffle arancini was heaven.", date: "2 days ago" },
-              { name: "Mike Chen", rating: 5, comment: "Best dining experience in the city. The wagyu ribeye was perfect!", date: "1 week ago" },
-              { name: "Emily Davis", rating: 4, comment: "Great atmosphere and delicious food. Will definitely be back!", date: "2 weeks ago" }
-            ].map((review, index) => (
-              <Card key={index} className="bg-white/80 border-0 shadow-lg">
+            {feedbackList.length === 0 && (
+              <p className="text-center col-span-3 text-gray-500">No feedback yet.</p>
+            )}
+            {feedbackList.map((review, index) => (
+              <Card key={review.id || index} className="bg-white/80 border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-3">
                     <div className="flex">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <Star
                           key={star}
-                          className={`h-4 w-4 ${
-                            star <= review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
-                          }`}
+                          className={`h-4 w-4 ${star <= review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
                         />
                       ))}
                     </div>
-                    <span className="ml-2 text-sm text-gray-500">{review.date}</span>
+                    <span className="ml-2 text-sm text-gray-500">{review.date ? new Date(review.date).toLocaleDateString() : ''}</span>
                   </div>
                   <p className="text-gray-700 mb-3 italic">"{review.comment}"</p>
                   <p className="font-semibold text-gray-800">- {review.name}</p>

@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "npx nodemon src/index.ts",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "npx tsc",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

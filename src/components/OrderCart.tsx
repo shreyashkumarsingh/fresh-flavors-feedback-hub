@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -39,28 +38,39 @@ const OrderCart = ({ isOpen, onClose, items, onRemove, onUpdateQuantity, totalPr
       });
       return;
     }
-
     setIsCheckingOut(true);
-    
-    // Simulate order processing
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Order Placed Successfully!",
-      description: `Your order for $${totalPrice.toFixed(2)} has been confirmed. Estimated delivery: 30-45 minutes.`,
-    });
-    
-    setIsCheckingOut(false);
-    onClose();
-    
-    // Reset form
-    setCustomerInfo({
-      name: '',
-      email: '',
-      phone: '',
-      address: '',
-      specialRequests: ''
-    });
+    try {
+      const res = await fetch('http://localhost:4000/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...customerInfo,
+          items,
+          total: totalPrice
+        })
+      });
+      if (!res.ok) throw new Error('Failed to place order');
+      toast({
+        title: "Order Placed Successfully!",
+        description: `Your order for $${totalPrice.toFixed(2)} has been confirmed. Estimated delivery: 30-45 minutes.`,
+      });
+      setIsCheckingOut(false);
+      onClose();
+      setCustomerInfo({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        specialRequests: ''
+      });
+    } catch {
+      toast({
+        title: "Order failed",
+        description: "Could not place order. Please try again later.",
+        variant: "destructive"
+      });
+      setIsCheckingOut(false);
+    }
   };
 
   if (items.length === 0) {

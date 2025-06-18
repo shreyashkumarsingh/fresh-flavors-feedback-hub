@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,81 +12,13 @@ interface MenuProps {
 
 const Menu = ({ onAddToCart }: MenuProps) => {
   const [activeCategory, setActiveCategory] = useState('appetizers');
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
 
-  const menuItems: MenuItem[] = [
-    // Appetizers
-    {
-      id: '1',
-      name: 'Samosa Chaat',
-      description: 'Crispy samosas topped with spiced chickpeas and chutneys',
-      price: 180,
-      category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '2',
-      name: 'Tandoori Chicken Wings',
-      description: 'Marinated chicken wings grilled in tandoor oven',
-      price: 240,
-      category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      id: '3',
-      name: 'Paneer Tikka',
-      description: 'Grilled cottage cheese cubes with bell peppers and onions',
-      price: 210,
-      category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    // Mains
-    {
-      id: '4',
-      name: 'Butter Chicken',
-      description: 'Tender chicken in rich tomato and cream curry',
-      price: 330,
-      category: 'mains',
-      image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      id: '5',
-      name: 'Dal Makhani',
-      description: 'Creamy black lentils slow-cooked with butter and spices',
-      price: 270,
-      category: 'mains',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '6',
-      name: 'Biryani Hyderabadi',
-      description: 'Aromatic basmati rice with tender mutton and spices',
-      price: 420,
-      category: 'mains',
-      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    // Desserts
-    {
-      id: '7',
-      name: 'Gulab Jamun',
-      description: 'Soft milk dumplings in cardamom-rose syrup',
-      price: 120,
-      category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1571167913668-572de1ba5c24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    },
-    {
-      id: '8',
-      name: 'Kulfi Faluda',
-      description: 'Traditional Indian ice cream with vermicelli and nuts',
-      price: 150,
-      category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      isVegetarian: true
-    }
-  ];
+  useEffect(() => {
+    fetch('http://localhost:4000/api/menu')
+      .then(res => res.json())
+      .then(data => setMenuItems(data));
+  }, []);
 
   const categories = [
     { id: 'appetizers', name: 'Appetizers' },
