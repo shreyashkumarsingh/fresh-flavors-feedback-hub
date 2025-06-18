@@ -22,7 +22,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '1',
       name: 'Samosa Chaat',
       description: 'Crispy samosas topped with spiced chickpeas and chutneys',
-      price: 12,
+      price: 180,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -31,7 +31,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '2',
       name: 'Tandoori Chicken Wings',
       description: 'Marinated chicken wings grilled in tandoor oven',
-      price: 16,
+      price: 240,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -39,7 +39,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '3',
       name: 'Paneer Tikka',
       description: 'Grilled cottage cheese cubes with bell peppers and onions',
-      price: 14,
+      price: 210,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -48,16 +48,16 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '4',
       name: 'Aloo Tikki Chaat',
       description: 'Crispy potato patties with yogurt and tamarind chutney',
-      price: 10,
+      price: 150,
       category: 'appetizers',
-      image: 'https://images.unsplash.com/photo-1606471842876-e0d8fb6f7b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1625937669120-8bb5bd9fdbb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '5',
       name: 'Seekh Kebab',
       description: 'Spiced minced lamb grilled on skewers',
-      price: 18,
+      price: 270,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -67,7 +67,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '6',
       name: 'Butter Chicken',
       description: 'Tender chicken in rich tomato and cream curry',
-      price: 22,
+      price: 330,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -75,7 +75,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '7',
       name: 'Dal Makhani',
       description: 'Creamy black lentils slow-cooked with butter and spices',
-      price: 18,
+      price: 270,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -84,15 +84,15 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '8',
       name: 'Biryani Hyderabadi',
       description: 'Aromatic basmati rice with tender mutton and spices',
-      price: 28,
+      price: 420,
       category: 'mains',
-      image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: '9',
       name: 'Palak Paneer',
       description: 'Cottage cheese cubes in creamy spinach curry',
-      price: 20,
+      price: 300,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -101,7 +101,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '10',
       name: 'Rogan Josh',
       description: 'Aromatic lamb curry with traditional Kashmiri spices',
-      price: 26,
+      price: 390,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -109,7 +109,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '11',
       name: 'Chicken Tikka Masala',
       description: 'Grilled chicken in spiced tomato-cream sauce',
-      price: 24,
+      price: 360,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -117,7 +117,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '12',
       name: 'Chole Bhature',
       description: 'Spiced chickpeas with fluffy fried bread',
-      price: 16,
+      price: 240,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -126,7 +126,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '13',
       name: 'Fish Curry Kerala',
       description: 'Fresh fish in coconut and curry leaf gravy',
-      price: 25,
+      price: 375,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1627662168223-7df99068099a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -134,7 +134,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '14',
       name: 'Tandoori Mixed Grill',
       description: 'Assorted tandoori meats and vegetables',
-      price: 32,
+      price: 480,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -144,16 +144,16 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '15',
       name: 'Gulab Jamun',
       description: 'Soft milk dumplings in cardamom-rose syrup',
-      price: 8,
+      price: 120,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1571167913668-572de1ba5c24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '16',
       name: 'Kulfi Faluda',
       description: 'Traditional Indian ice cream with vermicelli and nuts',
-      price: 10,
+      price: 150,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -162,16 +162,16 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '17',
       name: 'Ras Malai',
       description: 'Soft cottage cheese dumplings in cardamom milk',
-      price: 9,
+      price: 135,
       category: 'desserts',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
     },
     {
       id: '18',
       name: 'Kheer Badam',
       description: 'Rice pudding with almonds and cardamom',
-      price: 7,
+      price: 105,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -180,7 +180,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '19',
       name: 'Jalebi',
       description: 'Crispy spiral sweets soaked in sugar syrup',
-      price: 6,
+      price: 90,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -189,7 +189,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '20',
       name: 'Gajar Halwa',
       description: 'Carrot pudding with nuts and cardamom',
-      price: 8,
+      price: 120,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -200,7 +200,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '21',
       name: 'Masala Chai',
       description: 'Traditional spiced tea with milk and aromatic spices',
-      price: 4,
+      price: 60,
       category: 'beverages',
       image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -208,7 +208,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '22',
       name: 'Mango Lassi',
       description: 'Creamy yogurt drink with fresh mango pulp',
-      price: 6,
+      price: 90,
       category: 'beverages',
       image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -217,7 +217,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '23',
       name: 'Nimbu Pani',
       description: 'Fresh lime water with mint and black salt',
-      price: 5,
+      price: 75,
       category: 'beverages',
       image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -226,7 +226,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
       id: '24',
       name: 'Thandai',
       description: 'Traditional spiced milk drink with nuts and rose',
-      price: 7,
+      price: 105,
       category: 'beverages',
       image: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -334,7 +334,7 @@ const MenuPage = ({ onAddToCart, cartItemsCount, onCartClick }: MenuPageProps) =
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed text-sm">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-orange-600">${item.price}</span>
+                  <span className="text-2xl font-bold text-orange-600">₹{item.price}</span>
                   <Button
                     onClick={() => onAddToCart(item, 1)}
                     className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-full transform hover:scale-105 transition-all duration-200"

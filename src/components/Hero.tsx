@@ -1,5 +1,5 @@
 
-import { ShoppingCart, Star, Clock, MapPin, Play, ChevronDown } from 'lucide-react';
+import { ShoppingCart, Star, Clock, MapPin, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeroProps {
@@ -130,7 +130,7 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in delay-1000">
+        <div className="flex justify-center mb-16 animate-fade-in delay-1000">
           <Button
             onClick={scrollToMenu}
             size="lg"
@@ -138,15 +138,6 @@ const Hero = ({ cartItemsCount, onCartClick }: HeroProps) => {
           >
             Explore Menu
             <ChevronDown className="ml-2 h-5 w-5" />
-          </Button>
-          
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
-          >
-            <Play className="mr-2 h-5 w-5" />
-            Watch Story
           </Button>
         </div>
 

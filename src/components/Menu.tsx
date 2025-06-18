@@ -20,7 +20,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '1',
       name: 'Samosa Chaat',
       description: 'Crispy samosas topped with spiced chickpeas and chutneys',
-      price: 12,
+      price: 180,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -29,7 +29,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '2',
       name: 'Tandoori Chicken Wings',
       description: 'Marinated chicken wings grilled in tandoor oven',
-      price: 16,
+      price: 240,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -37,7 +37,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '3',
       name: 'Paneer Tikka',
       description: 'Grilled cottage cheese cubes with bell peppers and onions',
-      price: 14,
+      price: 210,
       category: 'appetizers',
       image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -47,7 +47,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '4',
       name: 'Butter Chicken',
       description: 'Tender chicken in rich tomato and cream curry',
-      price: 22,
+      price: 330,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -55,7 +55,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '5',
       name: 'Dal Makhani',
       description: 'Creamy black lentils slow-cooked with butter and spices',
-      price: 18,
+      price: 270,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -64,7 +64,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '6',
       name: 'Biryani Hyderabadi',
       description: 'Aromatic basmati rice with tender mutton and spices',
-      price: 28,
+      price: 420,
       category: 'mains',
       image: 'https://images.unsplash.com/photo-1563379091339-03246963d271?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
@@ -73,7 +73,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '7',
       name: 'Gulab Jamun',
       description: 'Soft milk dumplings in cardamom-rose syrup',
-      price: 8,
+      price: 120,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1571167913668-572de1ba5c24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -82,7 +82,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       id: '8',
       name: 'Kulfi Faluda',
       description: 'Traditional Indian ice cream with vermicelli and nuts',
-      price: 10,
+      price: 150,
       category: 'desserts',
       image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       isVegetarian: true
@@ -161,7 +161,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-orange-600">${item.price}</span>
+                  <span className="text-2xl font-bold text-orange-600">₹{item.price}</span>
                   <Button
                     onClick={() => onAddToCart(item, 1)}
                     className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-200"
